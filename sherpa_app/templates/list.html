@@ -1,0 +1,24 @@
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='site.css')}}" />
+{% extends "layout.html" %}
+{% block title %}
+Listar Usuarios
+{% endblock %}
+{% block content %}
+<h3>Lista de usarios</h3>
+<table border = 1 class="styled-table">
+    <thead>
+       <td>Usuario</td>
+       <td>Ciudad</td>
+       <td>Código Postal</td>
+    </thead>
+    
+    {% for row in rows %}
+       <tr>
+          <td>{{row["usuario"]}}</td>
+          <td>{{row["ciudad"]}}</td>
+          <td> {{row["cp"]}}</td>
+       </tr>
+    {% endfor %}
+ </table>
+ <p></p>
+{% endblock %}
