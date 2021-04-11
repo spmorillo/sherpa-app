@@ -1,7 +1,3 @@
-# Docker!!!
-# export set FLASK_APP=sherpa_app.webapp
-# python -m flask run
-
 import sqlite3
 from flask import Flask, render_template, request, jsonify
 from datetime import datetime
